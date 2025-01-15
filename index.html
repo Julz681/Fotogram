@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.png">
+    <title>Fotogram</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script
+      src="https://cloud.ccm19.de/app.js?apiKey=9ffa3477cb9a18c2321d76d5c71dd97e5982a05b4dfb64e1&amp;domain=6760a53e1771686e05037fb2&amp;lang=de_DE"
+      referrerpolicy="origin"
+    ></script>
+    
+
+<body onload="filterImages('all')">
+
+    <header id="header">
+        <div>
+            <div class="title">
+                <img class="logo" src="./img/Logo.png" alt="Fotogram-Logo">
+                <h1>Fotogram</h1>
+            </div>
+
+          
+        </div>
+
+        <img id="darkmode_toggle" class="darkmode_on" onclick="DarkmodeToggle()" src="./img/Darkmode.png"> 
+
+
+    </header>
+    <div class="opener" id="opener">
+    <h2 class="subheadline">Your personal photo album</h2>
+<div class="selectbuttons">
+    <button onclick="filterImages('all')">Alle Bilder</button>
+    <button onclick="filterImages('animals')">Tiere</button>
+    <button onclick="filterImages('landscape')">Landschaften</button>
+    <button onclick="filterImages('cars')">Oldtimer</button>
+</div>
+
+<div id="photos" class="photos"></div>
+
+
+
+
+<div id="overlay" class="overlay">
+    <div class="overlay-box">
+        <button id="prevButton" class="arrow left-arrow" onclick="showPrev()">←</button>
+        <img id="overlayImage" src="" alt="">
+        <div id="imageCount" class="image-count"></div>
+        <button  id="nextButton" class="arrow right-arrow" onclick="showNext()">→</button>
+        <button id="closeButton" class="close-button" onclick="closeOverlay()">✕</button>
+    </div>
+</div>
+</div>
+<footer id="footer">
+    <div class="logo_text">
+    <img src="./img/Logo.png" alt="Fotogram-Logo">
+    <p>Fotogram by Judith Lütke</p>
+</div>
+    <div class="data">
+        <a href="impressum.html" class="footer-link hide-mobile" target="_blank"
+          >Impressum</a
+        >
+        |
+        <a
+          href="datenschutz.html"
+          class="footer-link hide-mobile"
+          target="_blank"
+          >Datenschutz</a
+        >
+      </div>
+</footer>
+</body>
+</html>
